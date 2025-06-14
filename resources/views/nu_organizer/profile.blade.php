@@ -39,19 +39,16 @@
             <div id="contacts-container">
                 <b>Contacts</b>
                 <div style="margin: 1rem 0;"></div>
-                <p>JPLPC-MALVAR</p>
+                <p>National University Laguna</p>
                 <div style="margin: 1rem 0;"></div>
-                <p>(043) 778-2170</p>
-                <p>(043) 778-6633</p>
-                <p>(043) 406-0830</p>
+                <p>(+63) 919-082-1494</p>
+                <p>(+63) 977-346-6136</p>
+                <p>(049) 572-3356</p>
                 <div style="margin: 1rem 0;"></div>
-                <p>Registrar (Malvar)</p>
+                <p>Admissions</p>
                 <div style="margin: 1rem 0;"></div>
-                <p>registrar-malvar@g.batstate-u.edu.ph</p>
+                <p>admissions@nu-laguna.edu.ph</p>
                 <div style="margin: 1rem 0;"></div>
-                <p>ICT Services(Malvar)</p>
-                <div style="margin: 1rem 0;"></div>
-                <p>ictmalvar@g.batstate-u.edu.ph</p>
             </div>
             <div id="announcements-container">
                 <b>Announcements</b>
