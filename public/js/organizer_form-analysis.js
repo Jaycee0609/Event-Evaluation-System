@@ -390,7 +390,7 @@ document.getElementById('map-filter').addEventListener('change', async (event) =
 document.getElementById('graph-btn').addEventListener('click', () => {
     const formId = new URLSearchParams(window.location.search).get('formId');
     if (formId) {
-        window.location.href = `graphical-analysis.html?formId=${formId}`;
+        window.location.href = `/organizer/graphical-analysis?formId=${formId}`;
     }
 });
 

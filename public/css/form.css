@@ -9,7 +9,7 @@
 
 #nav-bar{
     padding: 0.7% 2%;
-    background-color: #AF1D1E;
+    background-color: #36428e;
     font-size: 1.8rem;
     color: white;
     gap: 2.5rem;
@@ -99,7 +99,7 @@ textarea{
 
 .submit-btn:hover{
     cursor: pointer;
-    background-color: #AF1D1E;
+    background-color: #36428e;
     color: white;
 }
 

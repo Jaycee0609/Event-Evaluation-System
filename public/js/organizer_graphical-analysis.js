@@ -358,7 +358,7 @@ window.addEventListener('DOMContentLoaded', () => {
         const backButton = document.getElementById('back-to-analysis');
         if (backButton) {
             backButton.addEventListener('click', () => {
-                window.location.href = `form-analysis.html?formId=${formId}`;
+                window.location.href = `/organizer/form-analysis?formId=${formId}`;
             });
         }
         displayGraphs(formId);

@@ -33,16 +33,14 @@
                 <div id="departments-container">
                     <label for="dept">Update Departments:</label>
                     <div style="margin: 0.1rem 0;"></div>
-                    <input type="checkbox" id="cics" name="dept" value="CICS">
-                    <label for="cics">CICS</label><br>
-                    <input type="checkbox" id="cit" name="dept" value="CIT">
-                    <label for="cit">CIT</label><br>
-                    <input type="checkbox" id="cas" name="dept" value="CAS">
-                    <label for="cas">CAS</label><br>
-                    <input type="checkbox" id="cabeihm" name="dept" value="CABEIHM">
-                    <label for="cabeihm">CABEIHM</label><br>
-                    <input type="checkbox" id="cte" name="dept" value="CTE">
-                    <label for="cte">CTE</label><br>
+                    <input type="checkbox" id="sas" name="dept" value="SAS">
+                    <label for="sas">SAS</label><br>
+                    <input type="checkbox" id="scs" name="dept" value="SCS">
+                    <label for="scs">SCS</label><br>
+                    <input type="checkbox" id="sea" name="dept" value="SEA">
+                    <label for="sea">SEA</label><br>
+                    <input type="checkbox" id="sabm" name="dept" value="SABM">
+                    <label for="sabm">SABM</label><br>
                 </div>
                 <div style="margin: 1rem 0;"></div>
                 <p>Update Sections:</p>
