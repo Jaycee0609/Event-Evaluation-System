@@ -120,3 +120,40 @@ button:hover{
     background-color: #36428e;
     color: white;
 }
+
+@media only screen and (max-width:850px){
+    #nav-bar{
+        font-size: 0.9rem;
+        gap: 0.5rem;
+    }
+
+    #back-btn,
+    #profile-icon,
+    #nav-logo{
+        width: 3rem;
+    }
+    
+    #data-container{
+        width: 26rem;
+    }
+
+    .group-title,
+    #form-title{
+        font-size: 2rem;
+    }
+
+    #form-count{
+        font-size: 1.5rem;
+    }
+
+    p,
+    .response-counts-section,
+    .response-counts-title,
+    #map-filter
+    #graph-btn,
+    #expected-count,
+    #form-neg,
+    #form-pos{
+        font-size: 1.3rem;
+    }
+}

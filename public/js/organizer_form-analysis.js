@@ -157,7 +157,8 @@ async function displayAnswers(formId, totalResponses, responseCounts) {
                     answersData[groupTitle][sectionTitle] = { 1: 0, 2: 0, 3: 0, 4: 0, 5: 0 };
                 }
 
-                answersData[groupTitle][sectionTitle][answerValue] = (answersData[groupTitle][sectionTitle][answerValue] || 0) + 1;
+                answersData[groupTitle][sectionTitle][answerValue] = 
+                    (answersData[groupTitle][sectionTitle][answerValue] || 0) + 1;
             });
         });
     });
@@ -177,7 +178,6 @@ async function displayAnswers(formId, totalResponses, responseCounts) {
         groupElement.classList.add("group-title");
         groupElement.textContent = groupTitle;
         answersContainer.appendChild(groupElement);
-
         answersContainer.appendChild(document.createElement('br'));
 
         const sortedSections = Object.entries(sections).sort(([a], [b]) => {
@@ -212,19 +212,22 @@ async function displayAnswers(formId, totalResponses, responseCounts) {
                 responseCountElement.textContent = `${sectionTitle} - ${sectionResponseCount} (${responsePercentage}%)`;
                 answersContainer.appendChild(responseCountElement);
             }
-
         }
     }
 
     if (feedbackResponses.length > 0) {
-        feedbackResponses.forEach((feedback, index) => {
+        const feedbackHeading = document.createElement('p');
+        feedbackHeading.classList.add("group-title");
+        feedbackHeading.textContent = "Feedback";
+        answersContainer.appendChild(feedbackHeading);
+
+        feedbackResponses.forEach((feedback) => {
             console.log('Displaying feedback entry:', feedback);
             const feedbackElement = document.createElement('p');
             feedbackElement.classList.add("feedback-text");
             feedbackElement.textContent = `${feedback}`;
             answersContainer.appendChild(feedbackElement);
         });
-
     }
 }
 

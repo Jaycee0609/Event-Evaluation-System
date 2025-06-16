@@ -120,3 +120,33 @@ button:hover{
 input[type=checkbox]{
     transform: scale(1.5);
 }
+
+@media only screen and (max-width:850px){
+    #nav-bar{
+        font-size: 0.9rem;
+        gap: 0.5rem;
+    }
+
+    #back-btn,
+    #profile-icon,
+    #nav-logo{
+        width: 3rem;
+    }
+
+    #new-form-box{
+        width: 26rem;
+    }
+
+    h1{
+        font-size: 2rem;
+    }
+
+    #questionnaire-form label{
+        font-size: 1.3rem;
+    }
+
+    canvas{
+        height: 100% !important;
+        width: 100% !important;
+    }
+}

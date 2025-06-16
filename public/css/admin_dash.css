@@ -175,3 +175,73 @@ option {
     background-color: #36428e;
     color: white;
 }
+
+@media only screen and (max-width:1100px){
+    #events-box{
+        width: 40rem;
+    }
+
+    #dashboard {
+        border-top: 1px rgba(0, 0, 0, 0.284) solid;
+        position: relative;
+        background-color: #36428e;
+        height: auto;
+        padding: 0.5rem;
+        margin-top: 0;
+        display: flex;
+        flex-direction: row;
+    }
+
+    #profile-icon{
+        width: 4rem;
+    }
+}
+
+@media only screen and (max-width:700px){
+    #nav-bar{
+        font-size: 0.9rem;
+        gap: 0.5rem;
+    }
+
+    #nav-logo{
+        width: 3rem;
+    }
+
+    #events-box{
+        padding: 1.5rem;
+        width: 25rem;
+    }   
+
+    #events-title{
+        font-size: 2rem;
+    }
+
+    #dept{
+        font-size: 1.5rem;
+    }
+
+    .view-btn,
+    .title{
+        font-size: 1rem;
+    }
+
+    .view-btn{
+        width: 50%;
+        font-size: 1rem;
+    }
+
+    .title{
+        width: 100%;
+    }
+
+    .form-item{
+        width: 100%;
+        gap: 0;
+        display: flex;
+    }
+
+    .view-btn-container{
+        width: 100%;
+        display: flex;
+    }
+}   

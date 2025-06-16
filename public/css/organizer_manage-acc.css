@@ -120,3 +120,53 @@ button:hover{
     background-color: #36428e;
     color: white;
 }
+
+@media only screen and (max-width:1300px){
+    #acc-box{
+        width: 60rem;
+    }
+}
+
+@media only screen and (max-width:1000px){
+    #acc-box{
+        width: 50rem;
+    }
+
+    #filter-container{
+        gap: 0.5rem;
+    }
+
+    #searchInput{
+        width: 15rem;
+    }
+}
+
+@media only screen and (max-width:850px){
+    #nav-bar{
+        font-size: 0.9rem;
+        gap: 0.5rem;
+    }
+
+    #home-btn,
+    #profile-icon,
+    #nav-logo{
+        width: 3rem;
+    }
+
+    #acc-box{
+        width: 38rem;
+    }
+
+    #searchInput{
+        width: 10rem;
+    }
+
+    #deptFilter{
+        width: 10rem;
+    }
+
+    .toggle-button,
+    #data-table{
+        font-size: 1.3rem;
+    }
+}

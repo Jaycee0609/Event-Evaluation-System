@@ -361,10 +361,16 @@ document.addEventListener('DOMContentLoaded', async () => {
                 endDate,
                 sections,
                 questions,
-                responseCounts: sections.reduce((acc, section) => {
-                    acc[section] = 0;
-                    return acc;
-                }, {}),
+                responseCounts: (() => {
+                    const existingCounts = (formData && formData.responseCounts) || {};
+                    const updatedCounts = {};
+
+                    sections.forEach((section) => {
+                        updatedCounts[section] = existingCounts[section] ?? 0;
+                    });
+
+                    return updatedCounts;
+                })(),
                 qrCodeData: qrId || existingQRCodeData,
             };
     
@@ -382,7 +388,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             form.appendChild(successMessage);
     
             setTimeout(() => {
-                window.location.href = 'dash.html';
+                window.location.href = '/admin/dash';
             }, 2000);
     
         } catch (error) {
