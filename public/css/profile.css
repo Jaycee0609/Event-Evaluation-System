@@ -49,10 +49,10 @@ main{
 #profile-box{
     width: auto;
     padding: 4rem;
-    background-color: rgb(119, 117, 117);
+    background-color: #f9f9f9e6;
     font-size: 1.8rem;
     box-shadow: 0.3rem 0.3rem 0.5rem;
-
+    border-radius: 30px;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -109,10 +109,10 @@ main{
     height: auto;
     padding: 4rem;
     margin-bottom: 3rem;
-    background-color: rgb(119, 117, 117);
+    background-color: #f9f9f9e6;
     font-size: 1.8rem;
     box-shadow: 0.3rem 0.3rem 0.5rem;
-
+    border-radius: 30px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -123,10 +123,10 @@ main{
     height: auto;
     padding: 4rem;
     margin-bottom: 3rem;
-    background-color: rgb(119, 117, 117);
+    background-color: #f9f9f9e6;
     font-size: 1.8rem;
     box-shadow: 0.3rem 0.3rem 0.5rem;
-
+    border-radius: 30px;
     display: flex;
     flex-direction: column;
     align-items: center;

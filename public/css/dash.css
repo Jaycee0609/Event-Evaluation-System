@@ -72,10 +72,10 @@ main{
     width: 60rem;
     padding: 4rem;
     margin-top: 3rem;
-    background-color: rgb(119, 117, 117);
+    background-color: #f9f9f9e6;
     font-size: 1.8rem;
     box-shadow: 0.3rem 0.3rem 0.5rem;
-
+    border-radius: 30px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -85,7 +85,6 @@ main{
 
 .form-item{
     width: 60rem;
-
     display: flex;
     justify-content: center;
     align-items: center;
@@ -107,7 +106,7 @@ button{
 }
 
 .evaluate-button {
-    background-color: green;
+    background-color: red;
   }
   
 .evaluate-button:hover {
@@ -115,7 +114,7 @@ button{
 }
 
 .answered-button{
-    background-color: red;
+    background-color: green;
     color: white;
 }
 

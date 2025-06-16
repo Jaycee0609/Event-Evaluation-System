@@ -65,10 +65,10 @@ main{
     width: 80rem;
     padding: 6rem;
     margin-top: 2rem;
-    background-color: rgb(119, 117, 117);
+    background-color: #f9f9f9e6;
     font-size: 1.8rem;
     box-shadow: 0.3rem 0.3rem 0.5rem;
-
+    border-radius: 30px;
     display: flex;
     flex-direction: column;
     justify-content: center;
