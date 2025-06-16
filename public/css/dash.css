@@ -7,6 +7,16 @@
     font-family: Roboto;
 }
 
+body {
+  background-image: url('/imgs/bg.jpg'); 
+  background-size: cover;                 
+  background-position: center;           
+  background-repeat: no-repeat;          
+  height: 100vh;                        
+  background-attachment: fixed; 
+  margin: 0;                             
+}
+
 #nav-bar{
     padding: 0.7% 2%;
     background-color: #36428e;
@@ -62,7 +72,7 @@ main{
     width: 60rem;
     padding: 4rem;
     margin-top: 3rem;
-    background-color: rgba(119,117,117,0.5);
+    background-color: rgb(119, 117, 117);
     font-size: 1.8rem;
     box-shadow: 0.3rem 0.3rem 0.5rem;
 

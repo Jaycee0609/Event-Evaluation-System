@@ -30,7 +30,7 @@ async function fetchAndDisplaySpecificFields() {
   
       querySnapshot.forEach(async (docSnapshot) => {
         const data = docSnapshot.data();
-        const field1 = data.srCode;
+        const field1 = data.studentid;
         const field2 = `${data.fname} ${data.lname}`;
         const status = data.status;
         const dept = data.dept;
@@ -38,7 +38,7 @@ async function fetchAndDisplaySpecificFields() {
         departments.add(dept);
   
         const row = document.createElement("tr");
-        row.dataset.srCode = field1.toLowerCase();
+        row.dataset.studentid = field1.toLowerCase();
         row.dataset.fullName = field2.toLowerCase();
         row.dataset.dept = dept.toLowerCase();
   
@@ -100,10 +100,10 @@ async function fetchAndDisplaySpecificFields() {
       searchInput.addEventListener("input", () => {
         const searchTerm = searchInput.value.toLowerCase();
         rows.forEach(row => {
-          const srCode = row.dataset.srCode;
+          const studentid = row.dataset.studentid;
           const fullName = row.dataset.fullName;
           const dept = row.dataset.dept;
-          const isVisible = (srCode.includes(searchTerm) || fullName.includes(searchTerm)) &&
+          const isVisible = (studentid.includes(searchTerm) || fullName.includes(searchTerm)) &&
                             (deptFilter.value === "" || dept === deptFilter.value);
           
           row.style.display = isVisible ? "" : "none";

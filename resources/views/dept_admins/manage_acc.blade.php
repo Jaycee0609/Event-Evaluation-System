@@ -22,13 +22,13 @@
                 <a href="/dept/dash"><img src="../imgs/home.png" alt="" id="home-btn"></a>
                 <select name="deptFilter" id="deptFilter"></select>
                 <div id="search-container">
-                    <input type="text" name="searchInput" id="searchInput" placeholder="Search by SR Code or Name">
+                    <input type="text" name="searchInput" id="searchInput" placeholder="Search by Student ID or Name">
                 </div>
             </div>
             <table id="data-table">
                 <thead>
                     <tr>
-                        <th>SR-Code</th>
+                        <th>Student ID</th>
                         <th>Name</th>
                         <th>Status</th>
                         <th>Toggle</th>

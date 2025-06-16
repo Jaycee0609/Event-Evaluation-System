@@ -7,6 +7,16 @@
     font-family: Roboto;
 }
 
+body {
+  background-image: url('/imgs/bg.jpg'); 
+  background-size: cover;                 
+  background-position: center;           
+  background-repeat: no-repeat;          
+  height: 100vh;                        
+  background-attachment: fixed; 
+  margin: 0;                             
+}
+
 a{
     color: white;
     text-decoration: none;
@@ -65,7 +75,7 @@ h1{
     width: 40rem;
     height: auto;
     padding: 4rem;
-    background-color: rgba(119,117,117,0.5);
+    background-color: rgb(119, 117, 117);
     font-size: 1.8rem;
     box-shadow: 0.3rem 0.3rem 0.5rem;
 
@@ -112,7 +122,7 @@ input{
     color: #AF1D1E;
 }
 
-@media only screen and (max-width:600px){
+@media only screen and (max-width:850px){
     #nav-bar{
         font-size: 0.9rem;
         gap: 0.5rem;
@@ -123,7 +133,7 @@ input{
     }
 
     h1{
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
 
     #form-box{
@@ -143,5 +153,7 @@ input{
 
     #sign-in-btn{
         width: 7rem;
+        height: 3rem;
+        font-size: 1rem;
     }
 }

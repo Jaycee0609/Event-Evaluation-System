@@ -268,7 +268,7 @@ form.addEventListener("submit", async (e) => {
     form.appendChild(successMessage);
 
     setTimeout(() => {
-      window.location.href = "/ssc/dash";
+      window.location.href = "/admin/dash";
     }, 2000);
   } catch (error) {
     console.error("Error submitting form:", error);
