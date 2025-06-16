@@ -33,37 +33,6 @@ document.addEventListener('DOMContentLoaded', async () => {
         let currentGroup = '';
         let order = 1;
 
-        formData.questions.forEach((question, index) => {
-          if (question.group) {
-            const h2 = document.createElement('h2');
-            h2.textContent = question.group;
-            formContainer.appendChild(h2);
-            currentGroup = question.group;
-            order = 1;
-          }
-
-          const sectionTitle = document.createElement('p');
-          sectionTitle.textContent = question.text;
-          sectionTitle.classList.add('section-title');
-          formContainer.appendChild(sectionTitle);
-
-          question.choices.forEach(choice => {
-            const radioButton = document.createElement('input');
-            radioButton.type = 'radio';
-            radioButton.name = `question${index}`;
-            radioButton.value = choice;
-
-            const label = document.createElement('label');
-            label.textContent = choice;
-
-            formContainer.appendChild(radioButton);
-            formContainer.appendChild(label);
-            formContainer.appendChild(document.createElement('br'));
-          });
-
-          formContainer.appendChild(document.createElement('div')).style.margin = '1.5rem 0';
-        });
-
         const submitButton = document.createElement('button');
         submitButton.type = 'submit';
         submitButton.textContent = 'Submit';
@@ -165,6 +134,46 @@ document.getElementById("form-container").addEventListener("submit", async (e) =
         }
       }
     }
+  });
+
+  const formDoc = await getDoc(doc(db, "forms", formId));
+  if (!formDoc.exists()) {
+    console.error("Form data not found");
+    return;
+  }
+
+  const sectionMappings = {
+    "Service": ["venue", "ls", "materials", "accomodation"],
+    "Activity Design": ["goals", "methods", "sequence", "duration"],
+    "Participation": ["participation", "fulfillment", "rules", "behavior"],
+    "Facilitator": ["response", "level", "personality", "interest", "audience"],
+    "Emcee": ["speech", "presence", "interaction", "clarity", "preparedness"],
+  };
+
+  let questionIndex = 1;
+
+  Object.entries(sectionMappings).forEach(([group, names]) => {
+    groupedAnswers[group] = {
+      order: questionIndex++,
+      sections: [],
+    };
+
+    names.forEach((name, index) => {
+      const selected = document.querySelector(`input[name="${name}"]:checked`);
+      const label = document.querySelector(`input[name="${name}"]`)?.closest(".section-input")?.previousElementSibling;
+      const title = label ? label.textContent : name;
+
+      if (selected) {
+        groupedAnswers[group].sections.push({
+          title,
+          answer: parseInt(selected.value),
+          order: index + 1,
+        });
+      } else {
+        isValid = false;
+        if (label) label.style.color = "red";
+      }
+    });
   });
 
   if (!isValid) {
