@@ -167,6 +167,43 @@ document.getElementById("form-container").addEventListener("submit", async (e) =
     }
   });
 
+  const formDoc = await getDoc(doc(db, "forms", formId));
+  if (!formDoc.exists()) {
+    console.error("Form data not found");
+    return;
+  }
+
+  const questions = formDoc.data().questions;
+
+  let currentGroup = '';
+  let groupOrderMap = {};
+
+  questions.forEach((question, index) => {
+    if (question.group) {
+      currentGroup = question.group;
+      if (!groupedAnswers[currentGroup]) {
+        groupedAnswers[currentGroup] = {
+          order: question.order || index + 1,
+          sections: [],
+        };
+        groupOrderMap[currentGroup] = groupedAnswers[currentGroup].order;
+      }
+    }
+
+    const selected = document.querySelector(`input[name="question${index}"]:checked`);
+    if (selected) {
+      groupedAnswers[currentGroup].sections.push({
+        title: question.text,
+        answer: parseInt(selected.value),
+        order: index + 1,
+      });
+    } else {
+      isValid = false;
+      const sectionTitle = document.querySelectorAll(".section-title")[index];
+      if (sectionTitle) sectionTitle.style.color = "red";
+    }
+  });
+
   if (!isValid) {
     const submitButton = document.querySelector(".submit-btn");
 
